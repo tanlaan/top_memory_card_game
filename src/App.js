@@ -11,12 +11,17 @@ const FAKECARDS = [
 function App() {
   const [score, setScore] = useState(0)
   const [hiScore, setHiScore] = useState(0)
-  
 
   return (
     <div>
       <Header score={score} hiScore={hiScore} />
-      <CardList cards={FAKECARDS} />
+      <CardList 
+        cards={FAKECARDS} 
+        score= {score} 
+        setScore={setScore}
+        hiScore={hiScore}
+        setHiScore={setHiScore}
+      />
     </div>
 
   );
